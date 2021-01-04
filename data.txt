@@ -1,0 +1,1081 @@
+//8.Write a program to swap using third variable?
+#include <iostream>
+using namespace std;
+int main(){
+	int a,b,c;
+	a = 5;
+	b = 6;
+	c=a;
+	a=b;
+	b=c;
+	cout<<a<<" "<<b;
+	
+	return 0;
+}
+
+//8.Write a program to swap using third variable?
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a, b, c;
+	a = 5;
+	b = 6;
+	c = a;
+	a = b;
+	b = c;
+	cout << a << " " << b;
+
+	return 0;
+}
+
+//9 Write a program to swap without using third variable.
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a, b, c;
+	a = 5;
+	b = 6;
+	a = a + b;
+	b = a - b;
+	a = a - b;
+	cout << a << " " << b;
+	return 0;
+}
+
+//10.Write a program to calculate area of Triangle.
+#include <iostream>
+using namespace std;
+int main()
+{
+	int b, h;
+	cout << "enter base and height : ";
+	cin >> b;
+	cin >> h;
+	cout << b * h / 2<<"cm2";
+	return 0;
+}
+
+//11.Write a program to calculate area of Circle.
+#include <iostream>
+using namespace std;
+int main()
+{
+	int r;
+	cout << "enter radius : ";
+	cin >> r;
+	cout << 3.14 * r * r << "cm2";
+
+	return 0;
+}
+
+//12.Write a program to calculate Simple Interest.
+#include <iostream>
+using namespace std;
+int main()
+{
+	int p, r, t;
+	cout << "enter principal, rate and interest : ";
+	cin >> p;
+	cin >> r;
+	cin >> t;
+	cout << p * r * t / 100<<"rs";
+
+	return 0;
+}
+
+//13.Write a program to convert distance from KM to MM.
+#include <iostream>
+using namespace std;
+int main(){
+	int km;
+	cout<<"distance in km : ";
+	cin>>km;
+	cout<<km*1000*100*10<<"mm";
+
+	return 0;
+}
+
+//14.Write a program to calculate average of three numbers.
+#include <iostream>
+using namespace std;
+int main(){
+	int a, b, c;
+	cout<<"enter three number : ";
+	cin>>a>>b>>c;
+	cout<<(a+b+c)/3;
+
+	return 0;
+}
+
+//15Write a program to calculate temperature conversion from Celsius to Fahrenheit (F= (9/5) C+32)
+#include <iostream>
+using namespace std;
+int main(){
+	int t;
+	cout<<"temperature in deg c : ";
+	cin>>t;
+	cout<<(9/5)*t+32<<" deg f";
+
+	return 0;
+}
+
+//16.Write a program to calculate temperature conversion from Fahrenheit to Celsius. (C= (F- 32)5/9)
+#include <iostream>
+using namespace std;
+int main(){
+	int t;
+	cout<<"temperature in deg f : ";
+	cin>>t;
+	cout<<(t- 32)*5/9<<" deg c";
+
+	return 0;
+}
+
+
+
+//17.A cashier has some amount of money(e.g. rs4526).Write a program to calculate out how many currency of Rs1000, Rs500, Rs100, Rs50, Rs20, Rs10, Rs5, Rs2, Rs1 required.
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a, thou, fiveh, hun, fifty, twenty, ten, five, two, one;
+    cout << "amount in Rs : ";
+    cin >> a;
+    thou = 0;
+    five = 0;
+    hun = 0;
+    fiveh = 0;
+    fifty = 0;
+    twenty = 0;
+    ten = 0;
+    two = 0;
+
+    thou = a / 1000;
+    a = a - thou * 1000;
+
+    fiveh = a / 500;
+    a = a - fiveh * 500;
+
+    hun = a / 100;
+    a = a - hun * 100;
+
+    fifty = a / 50;
+    a = a - fifty * 500;
+
+    if (a < 50)
+    {
+        twenty = a / 20;
+        a = a - twenty * 20;
+    }
+    if (a < 20)
+    {
+        ten = a / 10;
+        a = a - ten * 10;
+    }
+
+    if (a < 10)
+    {
+        five = a / 5;
+        a = a - five * 10;
+    }
+    if (a < 10)
+    {
+        two = a / 2;
+        a = a - two * 2;
+    }
+
+    one = a / 1;
+    a = a - one * 1;
+
+    cout << "thousand : " << thou << endl;
+    cout << "five hundred : " << fiveh << endl;
+    cout << "hundred : " << hun << endl;
+    cout << "fifty : " << fifty << endl;
+    cout << "twenty : " << twenty << endl;
+    cout << "ten : " << ten << endl;
+    cout << "five : " << five << endl;
+    cout << "two : " << two << endl;
+    cout << "one : " << one << endl;
+    return 0;
+}
+
+//18.Write a program that accepts four digit number from user and calculate the sum of first and last digit.
+#include <iostream>
+using namespace std;
+int main()
+{
+	int four ,three , two,one , digit;
+	cout<<"enter your digit : ";
+	cin>>digit;
+	four = digit / 1000;
+	digit = digit - four* 1000;
+	three = digit / 100;
+	digit = digit - three* 100;
+	two = digit / 10;
+	digit = digit - two* 10;
+	one = digit / 1;
+	digit = digit - one* 1;
+	cout<<four + one;
+    return 0;
+}
+
+
+//19.Write a program that accepts marks of five subjects from user and calculate the total marks and then calculate the percentage out of 500?
+#include <iostream>
+using namespace std;
+int main()
+{
+    float Hindi, English, Maths, Science, Social_Science;
+    cout << "marks in hindi : ";
+    cin >> Hindi;
+    cout << "marks in english : ";
+    cin>>English;
+    cout << "marks in maths : ";
+    cin >>Maths;
+    cout << "marks in science : ";
+    cin>>Science;
+    cout << "marks in social-science : ";
+    cin >>Social_Science;
+    cout << "Percentage : "<<(Hindi+English+Social_Science+Science+Maths)*100/500<<" %";
+
+
+    return 0;
+}
+
+//20.Write a program that accepts a character from user and print its ASCII value?
+#include <iostream>
+using namespace std;
+int main()
+{
+    char inti;
+    cin>>inti;
+    cout<<int(inti);
+
+
+    return 0;
+}
+
+//21.Write a program that accepts a three digit number from user and obtain reverse of the 
+//number and then calculate sum of all the digits.(without using if/ loop)
+#include <iostream>
+using namespace std;
+int main()
+{
+    int one ,two,three,digit;
+    cout<<"enter digit : ";
+    cin>>digit;
+    one = digit /100;
+    digit = digit - one * 100;
+    two = digit /10;
+    digit = digit - two * 10;
+    three = digit /1;
+    digit = digit - three * 1;
+    
+    cout<<"reverse of the given number : "<<three<<two<<one<<endl;
+    cout<<"sum of digits : "<<one + two + three;
+
+    return 0;
+}
+
+//22.Write a program that accepts a numeric value from user and print its corresponding character?
+#include <iostream>
+using namespace std;
+int main()
+{
+    int pre , forw,digit;
+    cout<<"enter digit : ";
+    cin>>digit;
+    cout<<"previous : " << digit-1<<" number : "<<digit<<" upcoming : "<<digit+1;
+    return 0;
+}
+
+/*23.Write a program to calculate gross salary and net salary. Accept basic salary from user,
+TA(Travel Allowance) i.e 10% of basic salary, PF(Provident Fund) i.e 7.8% of basic , DA(Dearness Allowance) is 500.
+gs=basic+da+ta; ns=gs-pf;
+*/
+#include <iostream>
+using namespace std;
+int main()
+{  float basic,net,gross,TA, PF,DA;
+DA = 500;
+cout<<"enter basic income : ";
+cin>> basic;
+TA = (10*basic)/100;
+PF = (7.8*basic)/100;
+gross = basic+DA+TA;
+net = gross - PF;
+cout<<"gross salary : "<<gross<<endl;
+cout<<"net salary : "<<net;
+    
+    return 0;
+}
+
+//24.Write a program that accepts a number from user and calculate whether it is positive or negative or zero
+#include <iostream>
+using namespace std;
+int main()
+{   int num;
+cout<<"enter number to be checked : ";
+cin>>num;
+if(0<num){
+	cout<<"positive";
+}else if(0>num){
+	cout<<"negative";
+}else {
+	cout<<"Zero";
+}
+	return 0;
+}
+
+//25.Write a program to calculate first number is divisible by second or not?
+#include <iostream>
+using namespace std;
+int main()
+{   int num1,num2;
+cout<<"enter number 1 : ";
+cin>>num1;
+cout<<"enter number 2 : ";
+cin>>num2;
+
+if(num1 % num2 == 0)
+	cout<<"divisible";
+else 
+	cout<<"not divisible";
+
+	return 0;
+}
+
+//26.Write a program that accepts a three digit number from user and check whether it is palindrome or not.
+#include <iostream>
+using namespace std;
+int main()
+{   int num1,t,tw,o;
+cout<<"enter number : ";
+cin>>num1;
+
+t = num1 /100;
+num1= num1 - 100*t;
+tw = num1 /10;
+num1= num1 - 10*tw;
+o = num1 /1;
+num1= num1 - 1*o;
+
+cout<<t<<" "<<tw<<" "<<o<<" ";
+
+if(t == o){
+	cout<<"Its a palandrome ";
+}else {
+	cout<<"Its not a palandrome ";
+}
+
+	return 0;
+}
+
+//27.Write a program that accepts a three digit number from user and check whether it is Armstrong or not.(eg. 153= 13+53+33)
+#include <iostream>
+using namespace std;
+int main()
+{   int num1,num2,t,tw,o,sum;
+cout<<"enter number : ";
+cin>>num1;
+num2 = num1;
+t = num1 /100;
+num1= num1 - 100*t;
+tw = num1 /10;
+num1= num1 - 10*tw;
+o = num1 /1;
+num1= num1 - 1*o;
+sum = (t*t*t) + (tw*tw*tw )+ (o*o*o);
+
+if(num2 == sum){
+	cout<<"Its an Armstrong number ";
+}else {
+	cout<<"Its not an Armstrong number ";
+}
+
+	return 0;
+}
+
+
+//28.Write a program that accepts a three digit number from user and find the greatest digit in it.
+#include <iostream>
+using namespace std;
+int main()
+{   int num1,num2,t,tw,o
+;
+cout<<"enter number : ";
+cin>>num1;
+num2 = num1;
+t = num1 /100;
+num1= num1 - 100*t;
+tw = num1 /10;
+num1= num1 - 10*tw;
+o = num1 /1;
+num1= num1 - 1*o;
+
+if(t > tw){
+	if(t>o){
+		cout<<t<<" is greatest number ";
+	}else{
+		cout<<o<<" is greatest number ";
+	}
+}else{
+	if(tw>o){
+		cout<<tw<<" is greatest number ";
+	}else{
+		cout<<o<<" is greatest number ";
+	}
+}
+	return 0;
+}
+
+//29.Write a program to calculate whether year is leap year or not?
+#include <iostream>
+using namespace std;
+int main()
+{   int CY;
+
+cout<<"enter current year : ";
+cin>>CY;
+
+if(CY % 4 == 0){
+	cout<<"its a leap year ";
+}else{
+	cout<<"its not a leap year ";
+}
+	return 0;
+}
+
+//30.Write a program to calculate whether a character is vowel or consonant.
+#include <iostream>
+using namespace std;
+int main()
+{   char c;
+
+cout<<"enter alphabet : ";
+cin>>c;
+
+if( c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U' ){
+	cout<<"its a vowel ";
+}else{
+	cout<<"its not a vowel , its a consonant";
+}
+	return 0;
+}
+
+
+//31.Write a program to calculate whether character is in lowercase or uppercase.
+#include <iostream>
+using namespace std;
+int main()
+{   char c;
+
+cout<<"enter alphabet : ";
+cin>>c;
+int a ;
+ a = int(c);
+ 
+if(c >= 65  && c <= 90){
+	cout<<"its an uppercase";
+}else if(c >= 97 && c <= 122){
+	cout<<"is a lowercase";
+}else {
+	cout<<"its not an alphabet";
+}
+	return 0;
+}
+
+//32.Write a program to calculate smallest number out of given three numbers.
+#include <iostream>
+using namespace std;
+int main()
+{   int t,tw,o;
+
+cout<<"enter first number : ";
+cin>>t;
+cout<<"enter second number : ";
+cin>>tw;
+cout<<"enter third number : ";
+cin>>o;
+ 
+if(t < tw){
+	if(t<o){
+		cout<<t<<" is smallest number ";
+	}else{
+		cout<<o<<" is smallest number ";
+	}
+}else{
+	if(tw<o){
+		cout<<tw<<" is smallest number ";
+	}else{
+		cout<<o<<" is smallest number ";
+	}
+}
+	return 0;
+}
+
+//33.Write a program to calculate largest number out of given four numbers.
+#include <iostream>
+using namespace std;
+int main()
+{   int t,tw,o,f,b1,b2;
+
+cout<<"enter first number : ";
+cin>>t;
+cout<<"enter second number : ";
+cin>>tw;
+cout<<"enter third number : ";
+cin>>o;
+cout<<"enter forth number : ";
+cin>>f;
+ 
+if(o > tw){
+	b1 = o ;
+}else{
+	b1=tw;
+}
+
+if(t > f){
+	b2=t;
+}else{
+	b2 = f;
+}
+
+if(b1>b2){
+	cout<<b1<<" is the greatest number";
+}else{
+	cout<<b2<<" is the greatest number";
+}
+	return 0;
+}
+
+//34.Write a program to accept basic salary from user, if basic salary is between 0 and 10000 then TA is 10% of basic salary,DA is 5% of basic salary. 
+// If salary is above 10000 then TA is 12% of basic salary, DA is 6% of basic. Now calculate gross salary as gs=basic salary+TA+DA?
+#include <iostream>
+using namespace std;
+int main()
+{   int BI,TA ,GS,DA;
+
+cout<<"enter basic salary : ";
+cin>>BI;
+
+if(BI > 10000){
+	TA = 12*BI/100;
+	DA = 6*BI/100;
+	
+	GS = BI + TA+DA;
+	cout<<"gross salary : "<<GS;
+	
+}
+else{
+	TA = 10*BI/100;
+	DA = 5*BI/100;
+	
+	GS = BI + TA+DA;
+	cout<<"gross salary : "<<GS;
+	
+}
+	return 0;
+}
+
+//35.Write a program to calculate Area and perimeter of Rectangle then calculate which one (out of area and perimeter) is greater.
+#include <iostream>
+using namespace std;
+int main()
+{   int area ,peri,l,b;
+
+cout<<"Enter length : ";
+cin>>l;
+cout<<"Enter breadth : ";
+cin>>b;
+area = l*b;
+peri = 2 (l+b);
+
+if(area > peri){
+	cout<<"area is greater than perimeter";
+}
+else{
+	cout<<"perimeter is greater than area";
+}
+	return 0;
+}
+
+/*
+36.Write a program that accepts marks (out of 100) of five subjects from user and calculate the sum then calculate percentage? Display message according to following condition
+percentage >=60 Grade A percentage >=50 Grade B percentage >=40 Grade C percentage <40 Grade D
+*/
+#include <iostream>
+using namespace std;
+int main()
+{
+    float Hindi, English, Maths, Science, Social_Science,percentage;
+    cout << "marks in hindi : ";
+    cin >> Hindi;
+    cout << "marks in english : ";
+    cin>>English;
+    cout << "marks in maths : ";
+    cin >>Maths;
+    cout << "marks in science : ";
+    cin>>Science;
+    cout << "marks in social-science : ";
+    cin >>Social_Science;
+    percentage = (Hindi+English+Social_Science+Science+Maths)*100/500;
+    if(percentage >=60 ){
+    	cout<<"Grade A";
+	}else if(percentage >=50){
+		cout<<"Grade B";
+	}else if(percentage >=40){
+		cout<<"Grade C";
+	}else{
+		cout<<"Grade D";
+	}
+	
+    return 0;
+}
+
+/*
+37.Write a program for generating electricity Bill. Accept last month unit and current month unit from user, then calculate and print bill amount according to following condition
+For units500es 3rs/unit
+201-300 4rs/unit
+>300 charges 5rs/unit
+*/
+#include <iostream>
+using namespace std;
+int main()
+{
+	int unit,two,three,four,five,sum=0;
+	cout<<"enter units consumed : ";
+	cin>>unit;
+	
+	if(unit > 300 ){
+		sum = (unit - 300)*5 + 4*100 + 100*3 + 100*2;
+	}else if(unit>=201){
+		sum =  (unit - 200)*4 +100*3 + 100*2;
+	}else if(unit >=101){
+		sum = (unit -100)*3 + 100*2;
+	}else{
+		sum = 2*unit; 
+	}
+	
+	cout<<"Your electricity bill is : "<<sum<<"rs"<<endl;
+	
+	
+    return 0;
+}
+
+/*
+38.Write a program to enter three subject marks (out of 100). Check if student is pass or Fail,
+ only if he/she scores greater than 75 in each subject and the average of all three subject marks should also be greater than 80.
+*/
+#include <iostream>
+using namespace std;
+int main()
+{
+	float Hindi, English, Maths,percentage;
+    cout << "marks in hindi : ";
+    cin >> Hindi;
+    cout << "marks in english : ";
+    cin>>English;
+    cout << "marks in maths : ";
+    cin >>Maths;
+	
+	if(Hindi >= 75 && English >= 75 && Maths >= 75){
+		if(((Maths+English+Hindi)/3) >= 80){
+			cout<<"Pass";
+		}else{
+			cout<<"Fail";
+		}
+	}
+	else{
+		cout<<"Fail";
+	}
+	
+	
+    return 0;
+}
+
+
+/*
+39.Write a program to calculate area of different Shapes based on users choice 
+S, C or R (like s for square, c for circle, and r for rectangle).
+*/
+#include <iostream>
+using namespace std;
+int main()
+{
+	char a ;
+	int area;
+	cout<<" s for square "<<endl;
+	cout<<" c for circle "<<endl;
+	cout<<" r for rectangle "<<endl;
+	cout<<" enter your choice : ";
+	cin>>a;
+	
+	switch(a){
+		case 's' : {
+			float s;
+			cout<<"enter side : ";
+			cin>>s;
+			cout<<"area of square is : "<<s*s;
+			break;
+		}
+		case 'c' : {
+			float r;
+			cout<<"enter radius : ";
+			cin>>r;
+			cout<<"area of circle is : "<<3.14*r*r;
+			break;
+		}
+		case 'r' : {
+			
+			float l,b;
+			cout<<"enter length : ";
+			cin>>l;
+			cout<<"enter breadth : ";
+			cin>>b;
+			cout<<"area of ractangle is : "<<l*b;
+			break;
+		}
+	}
+	
+    return 0;
+}
+
+/*
+40.Write a program to show day of week according to user input.
+*/
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a,b ;
+	cout<<" Enter today's date : ";
+	cin>>a;
+	b = a %7;
+	switch(b){
+		case 0:{
+			cout<<"sunday";
+			break;
+		}
+		case 1 :{
+			cout<<"monday";
+			break;
+		}
+		case 2 :{
+			cout<<"tuesday";
+			break;
+		}
+		case 3 :{
+			cout<<"wednesday";
+			break;
+		}
+		case 4 :{
+			cout<<"thursday";
+			break;
+		}
+		case 5 :{
+			cout<<"friday";
+			break;
+		}
+		case  6 :{
+			cout<<"saturday";
+			break;
+		}
+	}
+	
+    return 0;
+}
+
+/*
+41.Write a program to check if entered character is vowel or not.
+*/
+#include <iostream>
+using namespace std;
+int main()
+{
+    char a ;
+	cout<<" Enter today's date : ";
+	cin>>a;
+	switch(a){
+		case 'a':{
+			cout<<"its a vowel";
+			break;
+		}
+		case 'e' :{
+			cout<<"its a vowel";
+			break;
+		}
+		case 'i' :{
+			cout<<"its a vowel";
+			break;
+		}
+		case 'o' :{
+			cout<<"its a vowel";
+			break;
+		}
+		case 'u' :{
+			cout<<"its a vowel";
+			break;
+		}
+		default : {
+			cout<<"its a consonant";
+			break;
+		}
+	}
+	
+    return 0;
+}
+
+
+/*
+42.Write a program to check whether a number is even or odd using switch-case.
+*/
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a ,b;
+	cout<<" Enter number : ";
+	cin>>a;
+	b = a %2;
+	switch(b){
+		case 0:{
+			cout<<"even";
+			break;
+		}
+		case 1 :{
+			cout<<"odd";
+			break;
+		}
+	}
+	
+    return 0;
+}
+
+
+/*
+43.Write a program to calculate Factorial of any number.                                 
+*/
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,b=1;
+	cout<<" Enter number : ";
+	cin>>a;
+	while(a != 0){
+		b = b*a;
+		a--;
+	}
+	cout<<b;
+    return 0;
+}
+
+
+/*
+44.Write a program to print table of any number.
+*/
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,b=1;
+	cout<<" Enter number : ";
+	cin>>a;
+	while(b < 11){
+		cout<<a*b<<endl;
+		b++;
+	}
+    return 0;
+}
+
+/*
+45.Write a program to print Fibonacci Series.
+*/
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,b,c,s;
+	cout<<" Enter number : ";
+	cin>>a;
+	c = 1;
+	b = 0;
+    if(a == 0){
+		cout<<"0";
+	}
+	else if(a == 1){
+		cout<<"1";
+	}else if(a == 2 ){
+		cout<<"1";
+	}else{
+		for(int i=1 ;i< a;i++){
+			s = b+c;
+			b = c;
+			c = s;		
+		}
+		cout<<c;
+	}
+    return 0;
+}
+
+/*
+46.Write a program that accepts n number from user and calculate Maximum and Minimum value.
+*/
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+	cout<<" Enter number : ";
+	cin>>n;
+	int a[n];
+	for(int i = 1 ; i <=n;i++){
+		cout<<"enter "<<i<<" number : ";
+		cin>>a[i-1];
+	}
+	int max = INT_MIN,min = INT_MAX;
+	for(int i = 0; i<n;i++){
+		if(a[i] < min){
+			min = a[i];
+		}
+	}
+	for(int i = 0; i<n;i++){
+		if(a[i] > max){
+			max = a[i];
+		}
+	}
+	cout<<"max : "<<max<<endl;
+	cout<<"min : "<<min;
+    return 0;
+}
+
+/*
+47.Write a program to calculate sum of squares of n natural number.
+*/
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+	cout<<" Enter number : ";
+	cin>>n;
+	int sum = 0;
+	for(int i = 1 ; i <= n;i++){
+	sum = sum + i;
+	}
+	cout<<sum;
+    return 0;
+}
+
+/*
+48.Write a program to calculate sum of series (1/1+1/2+1/3+1/4+	).
+*/
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n;
+	cout<<" Enter number : ";
+	cin>>n;
+	float sum = 0;
+	for(float i = 1 ; i <= n;i++){
+	sum = sum + 1/i;
+	}
+	cout<<sum;
+    return 0;
+}
+
+
+/*
+49.Write a program to calculate sum of series (1/1! + 1/2! + 1/3! + 1/4! +	)
+*/
+#include <iostream>
+using namespace std;
+int main()
+{
+    float n,k,b=1;
+	cout<<" Enter number : ";
+	cin>>n;
+	float sum = 0;
+	for(float i = 1 ; i <= n;i++){
+		k = i;
+		while(k != 0){
+		b = b*k;
+		--k;
+		}
+	sum = sum + 1/b;
+	}
+	cout<<sum;
+    return 0;
+}
+
+
+/*
+50.Write a program to calculate sum of digits of a number.
+*/
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	
+	int n,sum,d;
+	cout<<"enter no. digit : ";
+	cin>>n;
+	int v = n,c=0;
+	while(v > 0){
+		v = v/10;
+		c++;
+	}
+	for(int i = 0 ; i <c; i++){
+		int k = pow(10,c-i-1);
+		d = n / k;
+		sum = sum + d;
+		n = n % k;
+	}
+	cout<<sum<<endl;
+
+	
+    return 0;
+}
+
+/*
+51.Write a program to check whether a number is Armstrong or not.
+*/
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main()
+{
+	
+	int n,sum,d;
+	cout<<"enter no. digit : ";
+	cin>>n;
+	int v = n,c=0;
+	int m = n;
+	while(v > 0){
+		v = v/10;
+		c++;
+	}
+	for(int i = 0 ; i <c; i++){
+		int k = pow(10,c-i-1);
+		d = n / k;
+		sum = sum + pow(d,3);
+		n = n % k;
+	}
+	cout<<sum<<endl;
+	
+	if(m == sum){
+		cout<<"its an armstrong number";
+	}else {
+		cout<<"its not an armstrong number";
+	}
+
+	
+    return 0;
+}
+
+
